@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 10px;
+    box-sizing: border-box;
+}
+#grilla {
+    display: grid;
+    grid-template-areas:
+        "nav header header"
+        "nav productos publicidad"
+        "nav servicios publicidad"
+        "nav footer footer";
+    grid-template-rows: 100px 1fr 1fr 75px;
+    grid-template-columns: 10% 75% auto;
+    row-gap: 10px;
+    column-gap: 10px;
+    height: 100vh;
+    font-family: "Jaro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #f6eac2;
+}
+
+.header {
+    background-color: #534928;
+    grid-area: header;
+    border-radius: 15px;
+    border: 3px double black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+.header li{
+    list-style: none;
+}
+
+.nav {
+    background-color: #97864f;
+    grid-area: nav;
+    border-radius: 15px;
+    border: 3px double black;
+}
+
+.publicidad {
+    background-color: #e7dfc5;
+    grid-area: publicidad;
+    border-radius: 15px;
+    border: 3px double black;
+}
+
+#productos {
+    background-color: #d6bb61;
+    grid-area: productos;
+    border-radius: 15px;
+    border: 3px double black;
+}
+
+#servicios {
+    background-color: #d6bb61;
+    grid-area: servicios;
+    border-radius: 15px;
+    border: 3px double black;
+}
+
+.footer {
+    background-color: #534928;
+    grid-area: footer;
+    border-radius: 15px;
+    border: 3px double black;
+}
+
+/* media queries */
+@media(min-width: 768px){
+    #grilla{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .border{
+        border: 5px solid black;
+        background-color: chocolate;
+    }
+}
+
+@media(min-width: 1024px){
+    #grilla{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .borde{
+        border: 5px solid black;
+        background-color: rgb(252, 238, 116);
+    }
+}
+
